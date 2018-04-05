@@ -1,0 +1,271 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<script src="../../scripts/jquery-treeview/lib/jquery-1.11.1.js"></script>	
+</head>
+<body style="padding:0px; margin:0px; background-color:#F6F6F6">
+
+		<div style="height:30px;">
+			<div style="padding:3px;position:fixed;background-color:#DDE0E3; width:100%;">
+				<div style="float:right; margin-right:5px; font-size:12px; font-family:Arial">
+					<a href="sidebar.html">Back to Model</a>
+				</div>
+			</div>
+		</div>
+<div style="font-family:Arial; font-size:12px;padding-left:5px;">
+  	<input id="input1" type="text" value=""/> 
+  	<p id="p1"></p>
+    <p id="p2"></p>	
+	<script type="text/javascript">
+		
+		var tabCount = 1;
+		var conceptsList = new Array(tabCount);
+		var currentSize = 0;
+		var addedConceptCount = 0;
+		for(x = 0; x < tabCount; x++) {
+			if ((103 - addedConceptCount) > 255){
+				currentSize = 255;
+			}else{
+				currentSize = 103 - addedConceptCount;
+			}
+			var jConcepts = new Array(currentSize);
+			for(i = 0; i < currentSize;i++) {
+				jConcepts[i] = new Array();
+			}
+			conceptsList[x] = jConcepts;
+			addedConceptCount = addedConceptCount + 255;
+		}
+conceptsList[0][0][0] = "6 cards in hand, Player objective not met, Player on turn";
+		conceptsList[0][0][1] = "1_6 cards in hand Player objective not met Player on turn";
+		conceptsList[0][1][0] = "6 cards in hand, Player objective not met, Player waiting for his turn";
+		conceptsList[0][1][1] = "2_6 cards in hand Player objective not met Player waiting for his turn";
+		conceptsList[0][2][0] = "Actors";
+		conceptsList[0][2][1] = "3_Actors";
+		conceptsList[0][3][0] = "Allocate game objectives";
+		conceptsList[0][3][1] = "4_Allocate game objectives";
+		conceptsList[0][4][0] = "Allow to Play Together";
+		conceptsList[0][4][1] = "5_Allow to Play Together";
+		conceptsList[0][5][0] = "Allow understanding applications of Chemistry in real life";
+		conceptsList[0][5][1] = "6_Allow understanding applications of Chemistry in real life";
+		conceptsList[0][6][0] = "Allow visualization of 3D structures ";
+		conceptsList[0][6][1] = "7_Allow visualization of 3D structures ";
+		conceptsList[0][7][0] = "Board";
+		conceptsList[0][7][1] = "8_Board";
+		conceptsList[0][8][0] = "Boolean";
+		conceptsList[0][8][1] = "9_Boolean";
+		conceptsList[0][9][0] = "Build up objective structure";
+		conceptsList[0][9][1] = "10_Build up objective structure";
+		conceptsList[0][10][0] = "Byte";
+		conceptsList[0][10][1] = "11_Byte";
+		conceptsList[0][11][0] = "Capabilities";
+		conceptsList[0][11][1] = "12_Capabilities";
+		conceptsList[0][12][0] = "Chance card";
+		conceptsList[0][12][1] = "13_Chance card";
+		conceptsList[0][13][0] = "Chance square, 6 cards in hand, Player objective not met, Player ends turn";
+		conceptsList[0][13][1] = "14_Chance square 6 cards in hand Player objective not met Player ends turn";
+		conceptsList[0][14][0] = "Chance square, 6 cards in hand, Player objective not met, Player on turn";
+		conceptsList[0][14][1] = "15_Chance square 6 cards in hand Player objective not met Player on turn";
+		conceptsList[0][15][0] = "Char";
+		conceptsList[0][15][1] = "16_Char";
+		conceptsList[0][16][0] = "Check objective";
+		conceptsList[0][16][1] = "17_Check objective";
+		conceptsList[0][17][0] = "Complete one turn on chance square";
+		conceptsList[0][17][1] = "18_Complete one turn on chance square";
+		conceptsList[0][18][0] = "Data";
+		conceptsList[0][18][1] = "19_Data";
+		conceptsList[0][19][0] = "Default Region";
+		conceptsList[0][19][1] = "20_Default Region";
+		conceptsList[0][20][0] = "Determine player movement";
+		conceptsList[0][20][1] = "21_Determine player movement";
+		conceptsList[0][21][0] = "Determine player sequence";
+		conceptsList[0][21][1] = "22_Determine player sequence";
+		conceptsList[0][22][0] = "Distribute cards";
+		conceptsList[0][22][1] = "23_Distribute cards";
+		conceptsList[0][23][0] = "Distribute on-hand element cards";
+		conceptsList[0][23][1] = "24_Distribute onhand element cards";
+		conceptsList[0][24][0] = "Double";
+		conceptsList[0][24][1] = "25_Double";
+		conceptsList[0][25][0] = "Draw top-up cards";
+		conceptsList[0][25][1] = "26_Draw topup cards";
+		conceptsList[0][26][0] = "EPBS Architecture";
+		conceptsList[0][26][1] = "27_EPBS Architecture";
+		conceptsList[0][27][0] = "EPBS Context";
+		conceptsList[0][27][1] = "28_EPBS Context";
+		conceptsList[0][28][0] = "End turn";
+		conceptsList[0][28][1] = "29_End turn";
+		conceptsList[0][29][0] = "Float";
+		conceptsList[0][29][1] = "30_Float";
+		conceptsList[0][30][0] = "Fulfill the chance";
+		conceptsList[0][30][1] = "31_Fulfill the chance";
+		conceptsList[0][31][0] = "Fulfill the mission";
+		conceptsList[0][31][1] = "32_Fulfill the mission";
+		conceptsList[0][32][0] = "Game being setting-up, Player sequence determined, Cards drawn, Objective cards not picked";
+		conceptsList[0][32][1] = "33_Game being settingup Player sequence determined Cards drawn Objective cards not picked";
+		conceptsList[0][33][0] = "Game being setting-up, Player sequence determined, Cards drawn, Objective cards picked";
+		conceptsList[0][33][1] = "34_Game being settingup Player sequence determined Cards drawn Objective cards picked";
+		conceptsList[0][34][0] = "Game being setting-up, Player sequence determined, Cards not drawn, Objective cards not picked";
+		conceptsList[0][34][1] = "35_Game being settingup Player sequence determined Cards not drawn Objective cards not picked";
+		conceptsList[0][35][0] = "Game completed, Player objective met";
+		conceptsList[0][35][1] = "36_Game completed Player objective met";
+		conceptsList[0][36][0] = "Game not running, Player sequence undetermined, Cards not drawn, Objective cards not picked";
+		conceptsList[0][36][1] = "37_Game not running Player sequence undetermined Cards not drawn Objective cards not picked";
+		conceptsList[0][37][0] = "Give out chance card";
+		conceptsList[0][37][1] = "38_Give out chance card";
+		conceptsList[0][38][0] = "Hexadecimal";
+		conceptsList[0][38][1] = "39_Hexadecimal";
+		conceptsList[0][39][0] = "Initial";
+		conceptsList[0][39][1] = "40_Initial";
+		conceptsList[0][40][0] = "Initializing the game";
+		conceptsList[0][40][1] = "41_Initializing the game";
+		conceptsList[0][41][0] = "Integer";
+		conceptsList[0][41][1] = "42_Integer";
+		conceptsList[0][42][0] = "Interfaces";
+		conceptsList[0][42][1] = "43_Interfaces";
+		conceptsList[0][43][0] = "Logical Actors";
+		conceptsList[0][43][1] = "44_Logical Actors";
+		conceptsList[0][44][0] = "Logical Architecture";
+		conceptsList[0][44][1] = "45_Logical Architecture";
+		conceptsList[0][45][0] = "Logical Component State Machine";
+		conceptsList[0][45][1] = "46_Logical Component State Machine";
+		conceptsList[0][46][0] = "Logical Context";
+		conceptsList[0][46][1] = "47_Logical Context";
+		conceptsList[0][47][0] = "Logical Functions";
+		conceptsList[0][47][1] = "48_Logical Functions";
+		conceptsList[0][48][0] = "Logical System";
+		conceptsList[0][48][1] = "49_Logical System";
+		conceptsList[0][49][0] = "Long";
+		conceptsList[0][49][1] = "50_Long";
+		conceptsList[0][50][0] = "LongLong";
+		conceptsList[0][50][1] = "51_LongLong";
+		conceptsList[0][51][0] = "Meet objective";
+		conceptsList[0][51][1] = "52_Meet objective";
+		conceptsList[0][52][0] = "Mission square";
+		conceptsList[0][52][1] = "53_Mission square";
+		conceptsList[0][53][0] = "Mission square, 6 cards in hand, Player objective not met, Player ends turn";
+		conceptsList[0][53][1] = "54_Mission square 6 cards in hand Player objective not met Player ends turn";
+		conceptsList[0][54][0] = "Mission square, 6 cards in hand, Player objective not met, Player on turn";
+		conceptsList[0][54][1] = "55_Mission square 6 cards in hand Player objective not met Player on turn";
+		conceptsList[0][55][0] = "Mission square, Less than 6 cards in hand, Player objective not met, Player on turn";
+		conceptsList[0][55][1] = "56_Mission square Less than 6 cards in hand Player objective not met Player on turn";
+		conceptsList[0][56][0] = "Missions";
+		conceptsList[0][56][1] = "57_Missions";
+		conceptsList[0][57][0] = "Move to chance square";
+		conceptsList[0][57][1] = "58_Move to chance square";
+		conceptsList[0][58][0] = "Move to mission square";
+		conceptsList[0][58][1] = "59_Move to mission square";
+		conceptsList[0][59][0] = "Movement";
+		conceptsList[0][59][1] = "60_Movement";
+		conceptsList[0][60][0] = "Objective Tracking";
+		conceptsList[0][60][1] = "61_Objective Tracking";
+		conceptsList[0][61][0] = "Operational Activities";
+		conceptsList[0][61][1] = "62_Operational Activities";
+		conceptsList[0][62][0] = "Operational Analysis";
+		conceptsList[0][62][1] = "63_Operational Analysis";
+		conceptsList[0][63][0] = "Operational Capabilities";
+		conceptsList[0][63][1] = "64_Operational Capabilities";
+		conceptsList[0][64][0] = "Operational Context";
+		conceptsList[0][64][1] = "65_Operational Context";
+		conceptsList[0][65][0] = "Operational Entities";
+		conceptsList[0][65][1] = "66_Operational Entities";
+		conceptsList[0][66][0] = "Pack the game";
+		conceptsList[0][66][1] = "67_Pack the game";
+		conceptsList[0][67][0] = "Physical Actors";
+		conceptsList[0][67][1] = "68_Physical Actors";
+		conceptsList[0][68][0] = "Physical Architecture";
+		conceptsList[0][68][1] = "69_Physical Architecture";
+		conceptsList[0][69][0] = "Physical Context";
+		conceptsList[0][69][1] = "70_Physical Context";
+		conceptsList[0][70][0] = "Physical Functions";
+		conceptsList[0][70][1] = "71_Physical Functions";
+		conceptsList[0][71][0] = "Physical System";
+		conceptsList[0][71][1] = "72_Physical System";
+		conceptsList[0][72][0] = "Play ";
+		conceptsList[0][72][1] = "73_Play ";
+		conceptsList[0][73][0] = "Player";
+		conceptsList[0][73][1] = "74_Player";
+		conceptsList[0][74][0] = "Player turn transition";
+		conceptsList[0][74][1] = "75_Player turn transition";
+		conceptsList[0][75][0] = "Predefined Types";
+		conceptsList[0][75][1] = "76_Predefined Types";
+		conceptsList[0][76][0] = "Promote interest in Chemistry among students";
+		conceptsList[0][76][1] = "77_Promote interest in Chemistry among students";
+		conceptsList[0][77][0] = "Provide Entertainment";
+		conceptsList[0][77][1] = "78_Provide Entertainment";
+		conceptsList[0][78][0] = "Provide Knowlege";
+		conceptsList[0][78][1] = "79_Provide Knowlege";
+		conceptsList[0][79][0] = "Provide knowledge and promote interest in Chemistry among students through a fun, interactive way ";
+		conceptsList[0][79][1] = "80_Provide knowledge and promote interest in Chemistry among students through a fun interactive way ";
+		conceptsList[0][80][0] = "Reactosis";
+		conceptsList[0][80][1] = "81_Reactosis";
+		conceptsList[0][81][0] = "Reward player";
+		conceptsList[0][81][1] = "82_Reward player";
+		conceptsList[0][82][0] = "Roles";
+		conceptsList[0][82][1] = "83_Roles";
+		conceptsList[0][83][0] = "Root Logical Function";
+		conceptsList[0][83][1] = "84_Root Logical Function";
+		conceptsList[0][84][0] = "Root Operational Activity";
+		conceptsList[0][84][1] = "85_Root Operational Activity";
+		conceptsList[0][85][0] = "Root Physical Function";
+		conceptsList[0][85][1] = "86_Root Physical Function";
+		conceptsList[0][86][0] = "Root System Function";
+		conceptsList[0][86][1] = "87_Root System Function";
+		conceptsList[0][87][0] = "Set up game";
+		conceptsList[0][87][1] = "88_Set up game";
+		conceptsList[0][88][0] = "Short";
+		conceptsList[0][88][1] = "89_Short";
+		conceptsList[0][89][0] = "Start turn on chance square";
+		conceptsList[0][89][1] = "90_Start turn on chance square";
+		conceptsList[0][90][0] = "Start turn on mission square";
+		conceptsList[0][90][1] = "91_Start turn on mission square";
+		conceptsList[0][91][0] = "String";
+		conceptsList[0][91][1] = "92_String";
+		conceptsList[0][92][0] = "System Analysis";
+		conceptsList[0][92][1] = "93_System Analysis";
+		conceptsList[0][93][0] = "System Context";
+		conceptsList[0][93][1] = "94_System Context";
+		conceptsList[0][94][0] = "System Functions";
+		conceptsList[0][94][1] = "95_System Functions";
+		conceptsList[0][95][0] = "System State Machine";
+		conceptsList[0][95][1] = "96_System State Machine";
+		conceptsList[0][96][0] = "UnsignedInteger";
+		conceptsList[0][96][1] = "97_UnsignedInteger";
+		conceptsList[0][97][0] = "UnsignedLong";
+		conceptsList[0][97][1] = "98_UnsignedLong";
+		conceptsList[0][98][0] = "UnsignedLongLong";
+		conceptsList[0][98][1] = "99_UnsignedLongLong";
+		conceptsList[0][99][0] = "UnsignedShort";
+		conceptsList[0][99][1] = "100_UnsignedShort";
+		conceptsList[0][100][0] = "Win the game";
+		conceptsList[0][100][1] = "101_Win the game";
+		conceptsList[0][101][0] = "Win the game after one turn on mission square";
+		conceptsList[0][101][1] = "102_Win the game after one turn on mission square";
+		conceptsList[0][102][0] = "[SystemCI] System";
+		conceptsList[0][102][1] = "103_SystemCI System";
+					
+	    $("#input1").keyup(function () {
+	      var value = $(this).val();
+	      // $("#p1").text(value);
+	      var element = document.getElementById('possible_keywords');
+	      var t = "";
+	      for (x=0; x < tabCount; x++){
+		  	var concepts = conceptsList[x];
+	      	for(i=0;i<concepts.length;i++) {
+	      		var index = concepts[i][0].toLowerCase().indexOf(value.toLowerCase());
+	      		if(index != -1) {
+		      		var value2 = concepts[i][0];
+	      			var value3 = concepts[i][1];
+	      			t = t.concat("<a href='concepts/" + value3 + ".html' target='content'>" + value2 + "</a><br/>");	      		
+	      		}
+	      	}
+	      }
+	      
+	      $("#p2").html(t);
+	      
+	      element.value = value;
+	    }).keyup();
+	    
+	</script>
+	</div>
+</body>
+</html>
